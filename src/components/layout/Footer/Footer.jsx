@@ -1,19 +1,15 @@
 const footerLinkGroups = [
   [
     ['About', '#about'],
-    ['Press', '#press'],
     ['Copyright', '#copyright'],
     ['Contact us', '#contact'],
     ['Creators', '#creators'],
-    ['Advertise', '#advertise'],
-    ['Developers', '#developers'],
   ],
   [
     ['Terms', '#terms'],
     ['Privacy', '#privacy'],
     ['Policy & Safety', '#policy-and-safety'],
     ['How Smart Hall works', '#how-smart-hall-works'],
-    ['Test new features', '#test-new-features'],
   ],
 ]
 

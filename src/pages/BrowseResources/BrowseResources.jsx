@@ -1,0 +1,1 @@
+/* En esta página se van a ensera recomedaciones con trajetas de los recursos disponibles categorizados por tipo: Recientemente agregados, Populares, Creados por mí, Favoritos. */
