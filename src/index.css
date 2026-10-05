@@ -92,6 +92,49 @@ input:focus-visible {
   border-right: 1px solid var(--color-line);
   background: rgb(20 17 25 / 0.72);
   backdrop-filter: blur(1.25rem);
+  transition: width 180ms ease, padding 180ms ease;
+}
+
+[data-sidebar-collapsed="true"] {
+  grid-template-columns: 5rem minmax(0, 1fr);
+}
+
+[data-sidebar-collapsed="true"] .app-sidebar {
+  align-items: center;
+  padding-inline: 0.65rem;
+}
+
+[data-sidebar-collapsed="true"] .brand span:last-child,
+[data-sidebar-collapsed="true"] .nav-link span:last-child,
+[data-sidebar-collapsed="true"] .app-footer-report span,
+[data-sidebar-collapsed="true"] .app-footer-links,
+[data-sidebar-collapsed="true"] .app-footer-copyright {
+  display: none;
+}
+
+[data-sidebar-collapsed="true"] .brand,
+[data-sidebar-collapsed="true"] .nav-link {
+  justify-content: center;
+}
+
+[data-sidebar-collapsed="true"] .nav-link {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+}
+
+[data-sidebar-collapsed="true"] .app-footer {
+  width: 100%;
+}
+
+[data-sidebar-collapsed="true"] .app-footer-report {
+  justify-content: center;
+  padding-inline: 0;
+}
+
+[data-sidebar-collapsed="true"] .app-footer-report-icon {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 [data-theme="light"] .app-sidebar {

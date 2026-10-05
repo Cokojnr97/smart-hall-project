@@ -51,7 +51,7 @@ const Footer = () => {
       </nav>
 
       <p className="app-footer-copyright">
-        &copy; {new Date().getFullYear()} Smart Hall
+        &copy; {new Date().getFullYear()} Smart Class Hall
       </p>
     </footer>
   )
