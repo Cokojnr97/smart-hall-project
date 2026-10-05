@@ -17,11 +17,14 @@ import MainMenuButton from '../ui/MainMenu/MainMenuButton.jsx'
 import NotificationsButton from '../ui/NotificationsButton/NotificationsButton.jsx'
 import CreateResourceButton from '../ui/CreateResourceButton/CreateResourceButton.jsx'
 
-const Navbar = () => {
+const Navbar = ({ isSidebarCollapsed, onMenuToggle }) => {
   return (
     <header className="navbar">
       <div className="navbar-start">
-        <MainMenuButton />
+        <MainMenuButton
+          isSidebarCollapsed={isSidebarCollapsed}
+          onClick={onMenuToggle}
+        />
         <HomeLogo />
       </div>
       <div className="navbar-center">

@@ -1,3 +1,14 @@
+/* En la barra lateral de la aplicación queremos incluir :
+1. Los íconos de navegación.
+    1.1. Ícono de inicio
+    1.2. Ícono de explorar recursos
+    1.3. Ícono de crear recurso
+    1.4. Ícono de gestión de recursos
+    1.5. Ícono de marcadores
+2. Opciones de configuración
+3. El footer de la aplicación
+*/
+
 import Footer from '../Footer/Footer.jsx'
 
 const navItems = [
@@ -8,9 +19,13 @@ const navItems = [
   ['☆', 'Bookmarks', '#bookmarks'],
 ]
 
-const Sidebar = ({ isLightTheme, onThemeToggle }) => {
+const Sidebar = ({ isCollapsed, isLightTheme, onThemeToggle }) => {
   return (
-    <aside className="app-sidebar" aria-label="Main navigation">
+    <aside
+      className="app-sidebar"
+      data-collapsed={isCollapsed}
+      aria-label="Main navigation"
+    >
       <a className="brand" href="/">
         <span className="brand-mark">S</span>
         <span>Smart Hall</span>

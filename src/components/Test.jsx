@@ -10,20 +10,29 @@ const scheduleItems = [
 
 export default function Test() {
   const [theme, setTheme] = useState('dark')
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
   const isLightTheme = theme === 'light'
 
   return (
      // Voy a integrar la navbar
      
-    <div className="app-shell" data-theme={theme}>
+    <div
+      className="app-shell"
+      data-sidebar-collapsed={isSidebarCollapsed}
+      data-theme={theme}
+    >
       <Sidebar
+        isCollapsed={isSidebarCollapsed}
         isLightTheme={isLightTheme}
         onThemeToggle={() => setTheme(isLightTheme ? 'dark' : 'light')}
       />
 
       <main className="app-main">
         <div className="app-content">
-          <NavBar />
+          <NavBar
+            isSidebarCollapsed={isSidebarCollapsed}
+            onMenuToggle={() => setIsSidebarCollapsed((collapsed) => !collapsed)}
+          />
           <header className="topbar">
             <div>
               <p className="eyebrow">Monday, January 15</p>
