@@ -1,26 +1,28 @@
+import { Link } from 'react-router-dom'
+
 const footerLinkGroups = [
   [
-    ['About', '#about'],
-    ['Press', '#press'],
-    ['Copyright', '#copyright'],
-    ['Contact us', '#contact'],
-    ['Creators', '#creators'],
-    ['Advertise', '#advertise'],
-    ['Developers', '#developers'],
+    ['About', '/about'],
+    ['Press', '/press'],
+    ['Copyright', '/copyright'],
+    ['Contact us', '/contact'],
+    ['Creators', '/creators'],
+    ['Advertise', '/advertise'],
+    ['Developers', '/developers'],
   ],
   [
-    ['Terms', '#terms'],
-    ['Privacy', '#privacy'],
-    ['Policy & Safety', '#policy-and-safety'],
-    ['How Smart Hall works', '#how-smart-hall-works'],
-    ['Test new features', '#test-new-features'],
+    ['Terms', '/terms'],
+    ['Privacy', '/privacy'],
+    ['Policy & Safety', '/policy-and-safety'],
+    ['How Smart Class Hall works', '/how-smart-class-hall-works'],
+    ['Test new features', '/test-new-features'],
   ],
 ]
 
 const Footer = () => {
   return (
     <footer className="app-footer">
-      <a className="app-footer-report" href="#report-history">
+      <Link className="app-footer-report" to="/report-history">
         <svg
           aria-hidden="true"
           className="app-footer-report-icon"
@@ -36,14 +38,14 @@ const Footer = () => {
           />
         </svg>
         <span>Report history</span>
-      </a>
+      </Link>
 
       <nav className="app-footer-links" aria-label="Footer navigation">
         {footerLinkGroups.map((group, groupIndex) => (
           <ul className="app-footer-link-group" key={groupIndex}>
             {group.map(([label, href]) => (
               <li key={label}>
-                <a href={href}>{label}</a>
+                <Link to={href}>{label}</Link>
               </li>
             ))}
           </ul>

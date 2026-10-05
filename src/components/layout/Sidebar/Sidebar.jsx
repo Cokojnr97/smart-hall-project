@@ -10,13 +10,14 @@
 */
 
 import Footer from '../Footer/Footer.jsx'
+import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
-  ['⌂', 'Home', '#home'],
-  ['⌕', 'Browse resources', '#resources'],
-  ['＋', 'Create resource', '#create-resource'],
-  ['▣', 'Resource management', '#resource-management'],
-  ['☆', 'Bookmarks', '#bookmarks'],
+  ['⌂', 'Home', '/'],
+  ['⌕', 'Browse resources', '/browse'],
+  ['＋', 'Create resource', '/create-resource'],
+  ['▣', 'Resource management', '/resources'],
+  ['☆', 'Bookmarks', '/bookmarks'],
 ]
 
 const Sidebar = ({ isCollapsed, isLightTheme, onThemeToggle }) => {
@@ -26,23 +27,23 @@ const Sidebar = ({ isCollapsed, isLightTheme, onThemeToggle }) => {
       data-collapsed={isCollapsed}
       aria-label="Main navigation"
     >
-      <a className="brand" href="/">
+      <Link className="brand" to="/">
         <span className="brand-mark">S</span>
         <span>Smart Hall</span>
-      </a>
+      </Link>
 
       <nav>
         <ul className="nav-list">
-          {navItems.map(([icon, label, href], index) => (
+          {navItems.map(([icon, label, href]) => (
             <li key={label}>
-              <a
-                className="nav-link"
-                data-active={index === 0}
-                href={href}
+              <NavLink
+                className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                end={href === '/'}
+                to={href}
               >
                 <span aria-hidden="true">{icon}</span>
                 <span>{label}</span>
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
