@@ -232,6 +232,48 @@ input:focus-visible {
   letter-spacing: -0.04em;
 }
 
+.documentation-page {
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.documentation-page .page-title {
+  margin-top: 0.25rem;
+}
+
+.documentation-date {
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.documentation-sections {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 58rem;
+  margin-top: 2rem;
+}
+
+.documentation-sections h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.documentation-sections p {
+  margin: 0.4rem 0 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.documentation-disclaimer {
+  max-width: 58rem;
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
 [data-theme="light"] .panel {
   background: var(--color-panel);
 }
