@@ -1,1 +1,5 @@
-/* En esta página se van a ensera recomedaciones con trajetas de los recursos disponibles categorizados por tipo: Recientemente agregados, Populares, Creados por mí, Favoritos. */
+import PageUnderDevelopment from '../../components/PageUnderDevelopment.jsx'
+
+export default function BrowseResources() {
+  return <PageUnderDevelopment pageName="Browse Resources Page" />
+}

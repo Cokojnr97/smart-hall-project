@@ -1,3 +1,9 @@
 /* 
 Página de inicio que va a contener un banner dinámico tipo "Hero" con un mensaje de bienvenida al usuario. El mensaje va a ser dinámico en inglés y va a cambiar dependiendo del día de la semana y la hora del día. Por ejemplo, si es lunes por la mañana, el mensaje va a ser "Happy Monday!" Al hacer scroll hacia abajo, el banner va a desaparecer y va a aparecer un menú de navegación fijo en la parte superior de la pantalla. 
 */
+
+import PageUnderDevelopment from '../../components/PageUnderDevelopment.jsx'
+
+export default function HomePage() {
+  return <PageUnderDevelopment pageName="Home Page" />
+}

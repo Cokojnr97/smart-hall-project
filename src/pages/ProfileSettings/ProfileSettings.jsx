@@ -1,1 +1,5 @@
-/* Página donde el usuario podrá modificar su información de perfil, datos de usuario, cambiar su contraseña y gestionar sus preferencias. */
+import PageUnderDevelopment from '../../components/PageUnderDevelopment.jsx'
+
+export default function ProfileSettings() {
+  return <PageUnderDevelopment pageName="Profile Settings Page" />
+}
