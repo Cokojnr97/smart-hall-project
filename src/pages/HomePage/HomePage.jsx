@@ -1,9 +1,29 @@
-/* 
-Página de inicio que va a contener un banner dinámico tipo "Hero" con un mensaje de bienvenida al usuario. El mensaje va a ser dinámico en inglés y va a cambiar dependiendo del día de la semana y la hora del día. Por ejemplo, si es lunes por la mañana, el mensaje va a ser "Happy Monday!" Al hacer scroll hacia abajo, el banner va a desaparecer y va a aparecer un menú de navegación fijo en la parte superior de la pantalla. 
-*/
+import { useEffect, useState } from 'react'
+import HomePageView from './HomePageView.jsx'
 
-import PageUnderDevelopment from '../../components/PageUnderDevelopment.jsx'
+function getWelcomeMessage(date = new Date()) {
+  const hour = date.getHours()
+  const timeOfDay = hour >= 5 && hour < 12
+    ? 'Good morning'
+    : hour >= 12 && hour < 18
+      ? 'Good afternoon'
+      : hour >= 18 && hour < 22
+        ? 'Good evening'
+        : 'Hello'
+  const day = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(date)
+
+  return `${timeOfDay}! Happy ${day}!`
+}
 
 export default function HomePage() {
-  return <PageUnderDevelopment pageName="Home Page" />
+  const [welcomeMessage, setWelcomeMessage] = useState(() => getWelcomeMessage())
+
+  useEffect(() => {
+    const updateWelcomeMessage = () => setWelcomeMessage(getWelcomeMessage())
+    const intervalId = window.setInterval(updateWelcomeMessage, 60_000)
+
+    return () => window.clearInterval(intervalId)
+  }, [])
+
+  return <HomePageView welcomeMessage={welcomeMessage} />
 }

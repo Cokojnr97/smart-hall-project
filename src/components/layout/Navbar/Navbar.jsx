@@ -10,6 +10,7 @@
  */
 
 import './Navbar.css'
+import { useLocation } from 'react-router-dom'
 import HomeLogo from '../ui/HomeLogo/HomeLogo.jsx'
 import UserInterfaceButton from '../ui/UserInterfaceButton/UserInterfaceButton.jsx'
 import SearchBar from '../ui/SearchBar/SearchBar.jsx'
@@ -18,8 +19,11 @@ import NotificationsButton from '../ui/NotificationsButton/NotificationsButton.j
 import CreateResourceButton from '../ui/CreateResourceButton/CreateResourceButton.jsx'
 
 const Navbar = ({ isSidebarCollapsed, onMenuToggle }) => {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+
   return (
-    <header className="navbar">
+    <header className={`navbar${isHomePage ? ' sticky top-0 z-50' : ''}`}>
       <div className="navbar-start">
         <MainMenuButton
           isSidebarCollapsed={isSidebarCollapsed}
