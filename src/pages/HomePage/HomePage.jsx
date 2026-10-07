@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import HomePageView from './HomePageView.jsx'
+import HomePageView from '../../components/pages/HomePage/HomePageView.jsx'
 
 function getWelcomeMessage(date = new Date()) {
   const hour = date.getHours()

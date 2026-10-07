@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import CreateResourceView from './CreateResourceView.jsx'
+import CreateResourceView from '../../components/pages/CreateResourcePanel/CreateResourceView.jsx'
 
 const STORAGE_KEY = 'smart-hall-resources'
 

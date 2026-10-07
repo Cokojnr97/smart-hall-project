@@ -13,6 +13,7 @@ const documentation = {
     sections: [
       ['Our purpose', 'We are building tools that help learners and educators find useful resources and manage their learning activities in one place.'],
       ['Educational use', 'Smart Class Hall is designed for educational use. Information and resources may be incomplete, user-generated, or still under review.'],
+      ['Project designers', 'Smart Class Hall was designed by Christopher Díaz and Juan Andrés Velásquez, students at CESDE.'],
     ],
   },
   press: {
@@ -35,8 +36,9 @@ const documentation = {
   },
   creators: {
     title: 'Creators',
-    intro: 'Creators can contribute educational resources for the Smart Class Hall community.',
+    intro: 'Smart Class Hall was designed by Christopher Díaz and Juan Andrés Velásquez from CESDE. Creators can also contribute educational resources for the community.',
     sections: [
+      ['Designers', 'The project designers are Christopher Díaz and Juan Andrés Velásquez, both students at CESDE.'],
       ['Creator responsibility', 'Creators are responsible for the accuracy, legality, accessibility, and permissions associated with the resources they submit.'],
       ['Moderation', 'We may review, restrict, or remove resources that violate our rules, applicable law, or the rights of others.'],
     ],

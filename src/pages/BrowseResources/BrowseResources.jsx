@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import BrowseResourcesView from './BrowseResourcesView.jsx'
+import BrowseResourcesView from '../../components/pages/BrowseResources/BrowseResourcesView.jsx'
 
 const STORAGE_KEY = 'smart-hall-resources'
 const FAVORITES_STORAGE_KEY = 'smart-hall-favorites'
